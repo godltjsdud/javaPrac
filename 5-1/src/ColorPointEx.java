@@ -11,7 +11,7 @@ class Point {
 		this.y = y;
 	}
 
-	public void showPoint() {
+	public void show() {
 		System.out.println("(" + x + "," + y + ")");
 	}
 }
@@ -28,9 +28,9 @@ class ColorPoint extends Point {
 		this.color = color;
 	}
 
-	public void showColorPoint() {
+	public void show() {
+		super.show();
 		System.out.print(color);
-		showPoint();
 	}
 }
 
@@ -38,9 +38,11 @@ public class ColorPointEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Point p = new Point(1,2);
+		p.show();
 		
 		ColorPoint cp = new ColorPoint(3,4,"alice blue");
-		cp.showColorPoint();
+		cp.show();
 	}
 
 }
